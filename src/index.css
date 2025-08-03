@@ -1,13 +1,380 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.langing-page {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.langing-page-heading {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  color: brown;
+}
+.landing-page-search-input {
+  border: 2px solid #ccccc0;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+.landing-page-search-icon {
+  color: #fff;
+  cursor: pointer;
+  size: 10px;
+}
+.langing-page-doctor-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 40px;
+  margin-top: 20px;
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.landing-page-doctor-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.landing-page-doctor-card-link {
+  text-decoration-line: underline;
+  text-decoration-color: #000;
+  text-decoration-thickness: 2px;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.landing-page-h2-heading {
+  font-size: 20px;
+  font-weight: 20px;
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #333;
+  margin: 10px 0;
+}
+.landing-page-specilazation {
+  font-size: 18px;
+  color: #666000;
+}
+.landing-page-status {
+  font-size: 20px;
+  color: #999;
+  margin-bottom: 10px;
+}
+.available {
+  color: green;
+  font-weight: bold;
+}
+.on-leave {
+  color: red;
+  font-weight: bold;
+}
+.fully-booked {
+  color: orange;
+  font-weight: bold;
+}
+.book-appointment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.book-appointment-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.book-appointment-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.book-appointment-name-input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+.book-appointment-email-input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+.book-appointment-datetime-input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+.book-appointment-submit-button {
+  padding: 10px;
+  background-color: #1d2984;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.patient-name-label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+.booked-appointment-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+}
+.booked-appoinment-heading {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: green;
+}
+.booked-apointment-paragraph {
+  font-size: 20px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+.booked-appointment-person-name {
+  font-weight: bold;
+  color: #1d2984;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.doctor-profile-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-align: center;
+}
+.doctor-profile-image {
+  width: 50vw;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.doctor-profile-heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #333;
+}
+.doctor-profile-discription {
+  font-size: 18px;
+  color: #000;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+.doctor-profile-discription1 {
+  font-size: 18px;
+  color: firebrick;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+.doctor-profile-description1-span {
+  font-weight: normal;
+  color: #1d2984;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+  font-style: italic;
+}
+.doctor-profile-book-button {
+  padding: 10px 20px;
+  background-color: #1d2984;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 5px;
+}
+
+/* Write your CSS code here */
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 90%;
+  max-width: 1110px;
+  margin: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .login-form-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.login-website-logo-mobile-img {
+  width: 165px;
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+
+@media screen and (min-width: 992px) {
+  .login-website-logo-mobile-img {
+    display: none;
+  }
+}
+
+.login-img {
+  width: 278px;
+}
+
+@media screen and (min-width: 992px) {
+  .login-img {
+    width: 60%;
+    max-width: 524px;
+    flex-shrink: 1;
+    margin-right: 20px;
+  }
+}
+
+.login-website-logo-desktop-img {
+  width: 185px;
+}
+
+@media screen and (max-width: 991px) {
+  .login-website-logo-desktop-img {
+    display: none;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 350px;
+}
+
+@media screen and (min-width: 992px) {
+  .form-container {
+    width: 350px;
+    flex-shrink: 0;
+    box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
+    padding: 64px 48px 64px 48px;
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.input-label {
+  margin-bottom: 0px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: #475569;
+}
+
+.username-input-field {
+  font-size: 14px;
+  height: 40px;
+  border: 1px solid #d7dfe9;
+  background-color: #e2e8f0;
+  color: #64748b;
+  border-radius: 2px;
+  margin-top: 5px;
+  padding: 8px 16px 8px 16px;
+}
+
+.password-input-field {
+  font-size: 14px;
+  height: 40px;
+  border: 1px solid #d7dfe9;
+  background-color: #e2e8f0;
+  color: #64748b;
+  border-radius: 2px;
+  margin-top: 5px;
+  padding: 8px 16px 8px 16px;
+}
+
+.login-button {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 2px;
+  background-color: #0b69ff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.error-message {
+  align-self: start;
+  font-size: 12px;
+  margin-top: 3px;
+  margin-bottom: 0px;
+  font-family: "Roboto";
+  font-size: 12px;
+  line-height: 16px;
+  color: #ff0b37;
+}
+.login-success-message {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0b69ff;
+  margin-top: 20px;
 }

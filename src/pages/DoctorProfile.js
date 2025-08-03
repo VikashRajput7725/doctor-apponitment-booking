@@ -1,38 +1,40 @@
 import { useParams, useNavigate } from "react-router-dom";
+import "../index.css";
 
 export default function DoctorProfile() {
   const { id } = useParams();
   const navigate = useNavigate();
   const doctor = {
     id,
-    name: "Dr. Alice Smith",
-    specialization: "Cardiologist",
-    bio: "Experienced cardiologist with 10 years in clinical practice.",
+    name: "Dr. Bob Lee",
+    specialization: "Dermatologist",
+    bio: "Experienced Dermatologist with 10 years in clinical practice. A medical doctor who specializes in dermatologist, treating, and preventing diseases and conditions of the heart and blood vessels. This includes coronary artery disease, heart rhythm disorders, heart failure, and congenital heart defects. Cardiologists use diagnostic tools such as ECGs, echocardiograms, and stress tests to evaluate cardiovascular health. They may also perform or recommend procedures like angioplasty or catheterization. Cardiologists work in hospitals, clinics, or private practices and often collaborate with surgeons and other specialists to ensure comprehensive patient care.",
     schedule: "Mon-Fri: 9am - 5pm",
-    image: "/images/alice.jpg",
+    image: "/images/dr-1.jpg",
   };
 
   return (
-    <div className="p-6 max-w-2xl mx-auto">
-      {" "}
+    <div className="doctor-profile-container">
       <img
         src={doctor.image}
         alt={doctor.name}
-        className="w-full h-60 object-cover rounded"
-      />{" "}
-      <h1 className="text-2xl font-bold mt-4">{doctor.name}</h1>{" "}
-      <p className="text-lg text-gray-700">{doctor.specialization}</p>{" "}
-      <p className="mt-2">{doctor.bio}</p>{" "}
-      <p className="mt-2 text-sm text-gray-600">
-        Availability: {doctor.schedule}
-      </p>{" "}
+        className="doctor-profile-image"
+      />
+      <h1 className="doctor-profile-heading">{doctor.name}</h1>
+      <p className="doctor-profile-discription">{doctor.specialization}</p>
+      <p className="doctor-profile-discription">{doctor.bio}</p>
+      <p className="doctor-profile-discription1">
+        Availability:
+        <span className="doctor-profile-description1-span">
+          {doctor.schedule}
+        </span>
+      </p>
       <button
         onClick={() => navigate(`/book/${id}`)}
-        className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        className="doctor-profile-book-button"
       >
-        {" "}
-        Book Appointment{" "}
-      </button>{" "}
+        Book Appointment
+      </button>
     </div>
   );
 }

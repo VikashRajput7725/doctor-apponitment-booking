@@ -10,7 +10,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/doctor/:id" element={<DoctorProfile />} />
+        <Route path="/doctor/:id/" element={<DoctorProfile />} />
         <Route path="/book/:id" element={<BookAppointment />} />
       </Routes>
     </Router>
